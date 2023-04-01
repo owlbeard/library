@@ -214,7 +214,7 @@ body {
   cursor: pointer;
 }
 
-#textMark {
+#textMark, #read {
   cursor: pointer;
   width: 25px;
   height: 25px;
