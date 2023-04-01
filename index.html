@@ -7,6 +7,7 @@
   <title>Reading Cat</title>
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="styles/normalize-css.css">
+  <link rel="shortcut icon" href="img/reading-cat.png">
   <script src="script/script.js" defer></script>
 </head>
 <body>
@@ -37,18 +38,16 @@
             <input type="text" id="pages" name="pages" required>
 
             <label class="checkbox" for="checkbox"><b>Have you read it?</b>
-              <input type="checkbox" id="checkbox" name="checkbox" required>
+              <input type="checkbox" id="read" name="checkbox">
               <span class="checkmark"></span>
             </label>
-            <button type="submit" class="btn">Add</button>
+            <button type="submit" class="btn add">Add</button>
             <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
           </form>
         </div>
       </div>
     </div>
-    <div class="books">
-      <div class="card">
-      </div>
+    <div class="contBooks" onclick="closeForm()">
     </div>
     <div class="footer">
       <a href="https://github.com/owlbeard"><img class="hublogo" src="img/github.svg" alt="Github Logo"></a>
