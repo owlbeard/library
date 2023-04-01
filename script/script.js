@@ -1,11 +1,12 @@
 /* Displaying the form whenever the user clicks the + sign on top of the screen. */
 function openForm() {
-  document.getElementById("myForm").style.display = "block";
+  document.getElementById("myForm").style.transform = "scale(1)";
 }
 /* Hiding the form whenever the user clicks the close button on form or anywhere on container area */
 function closeForm() {
-  document.getElementById("myForm").style.display = "none";
+  document.getElementById("myForm").style.transform = "scale(0)";
 }
+
 /* Library constructor function */
 function Library(title, author, pages, read) {
   this.title = title;

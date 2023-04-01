@@ -119,7 +119,7 @@ body {
 }
 
 .form-popup {
-  display: none;
+  transform: scale(0);
   position: relative;
   right: 40%;
   z-index: 9;
