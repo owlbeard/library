@@ -123,7 +123,7 @@ body {
   position: relative;
   right: 40%;
   z-index: 9;
-  background: linear-gradient(0.25turn, #7b0101, #2d2d2d, #015376); 
+  background: #2d2d2d;
   border-radius: 12px;
   color: white;
   opacity: 55;
@@ -141,8 +141,9 @@ body {
   margin: 5px 0 22px 0;
   border: none;
   border-radius: 12px;
-  background: linear-gradient(0.25turn, #015376, #2d2d2d, #7b0101); 
+  background: linear-gradient(#7b0101, #015376); 
   color: white;
+  font-weight: bold ;
 }
 
 .btn {
@@ -157,8 +158,8 @@ body {
 
 /* Set a style for the submit/login button */
 .form-container .btn {
-  background-color: white;
-  color: black;
+  background-color: #015376;
+  color: white;
   padding: 16px 20px;
   border: none;
   cursor: pointer;
@@ -168,7 +169,7 @@ body {
 }
 
 .form-container .cancel {
-  background-color: #2d2d2d;
+  background-color: #7b0101;
   color: white;
 }
 
