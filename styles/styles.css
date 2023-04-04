@@ -222,3 +222,7 @@ body {
   position: relative;
   top: 3px;
 }
+
+.backdrop-blur {
+  filter: blur(4px);
+}

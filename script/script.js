@@ -1,10 +1,18 @@
+const books = document.querySelector(".contBooks");
+const add = document.querySelector(".add");
+const form = document.querySelector("form");
+
+let bookNumber = 1
+
 /* Displaying the form whenever the user clicks the + sign on top of the screen. */
 function openForm() {
   document.getElementById("myForm").style.transform = "scale(1)";
+  books.classList.add("backdrop-blur");
 }
 /* Hiding the form whenever the user clicks the close button on form or anywhere on container area */
 function closeForm() {
   document.getElementById("myForm").style.transform = "scale(0)";
+  books.classList.remove("backdrop-blur");
 }
 
 /* Library constructor function */
@@ -14,12 +22,6 @@ function Library(title, author, pages, read) {
   this.pages = pages;
   this.read = read;
 }
-
-const books = document.querySelector(".contBooks");
-const add = document.querySelector(".add");
-const form = document.querySelector("form");
-
-let bookNumber = 1
 
 form.addEventListener("submit", (event) => {
   event.preventDefault()
