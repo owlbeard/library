@@ -83,6 +83,7 @@ form.addEventListener('submit', (event) => {
     let number = e.target.getAttribute('data-trash');
     book.remove();
     lib.splice(number, 1);
+    bookNumber -= 1;
   });
 
   bookNumber = bookNumber + 1;
