@@ -1,58 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reading Cat</title>
-  <link rel="stylesheet" href="styles/styles.css">
-  <link rel="stylesheet" href="styles/normalize-css.css">
-  <link rel="shortcut icon" href="img/reading-cat.png">
-  <script src="script/script.js" defer></script>
-</head>
-<body>
-  <div class="container">
-    <div class="header">
-      <div class="topBar">
-        <div class="logo">
-          <img class="logo-image" src="img/reading-cat.png" alt="Reading Cat">
-          <h1>READING CAT</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reading Cat</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/normalize-css.css" />
+    <link rel="shortcut icon" href="img/reading-cat.png" />
+    <script src="./script/script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="topBar">
+          <div class="logo">
+            <img
+              class="logo-image"
+              src="img/reading-cat.png"
+              alt="Reading Cat"
+            />
+            <h1>READING CAT</h1>
+          </div>
+          <div class="signUp">
+            <button class="signup">
+              <span class="signup-text">Sign Up</span>
+            </button>
+          </div>
         </div>
-        <div class="signUp">
-          <button class="signup"><span class="signup-text">Sign Up</span></button>
-        </div>
-      </div>
-      <div class="addBook">
-        <button class="open-button" onclick="openForm()"><img class="plus" src="img/sticker-plus-outline.svg" alt=""></button>
-        <div class="form-popup" id="myForm" style="transition: 0.5s ease-in-out;">
-          <form action="/action_page.php" class="form-container">
-            <h1>Add Book</h1>
-        
-            <label for="title"><b>Title</b></label>
-            <input type="text" id="title" name="title" required>
-        
-            <label for="author"><b>Author</b></label>
-            <input type="text" id="author" name="author" required>
-            
-            <label for="pages"><b>Pages</b></label>
-            <input type="text" id="pages" name="pages" required>
+        <div class="addBook">
+          <button class="open-button">
+            <img class="plus" src="img/sticker-plus-outline.svg" alt="" />
+          </button>
+          <div
+            class="form-popup"
+            id="myForm"
+            style="transition: 0.5s ease-in-out"
+          >
+            <form action="/action_page.php" class="form-container">
+              <h1>Add Book</h1>
 
-            <label class="checkbox" for="checkbox"><b>Have you read it?</b>
-              <input type="checkbox" id="read" name="checkbox">
-              <span class="checkmark"></span>
-            </label>
-            <button type="submit" class="btn add">Add</button>
-            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-          </form>
+              <label for="title"><b>Title</b></label>
+              <input type="text" id="title" name="title" required />
+
+              <label for="author"><b>Author</b></label>
+              <input type="text" id="author" name="author" required />
+
+              <label for="pages"><b>Pages</b></label>
+              <input type="number" id="pages" name="pages" required />
+
+              <label class="checkbox" for="checkbox"
+                ><b>Have you read it?</b>
+                <input type="checkbox" id="read" name="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <button type="submit" class="btn add">Add</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">
+                Close
+              </button>
+            </form>
+          </div>
         </div>
       </div>
+      <div class="contBooks" onclick="closeForm()"></div>
+      <div class="footer">
+        <a href="https://github.com/owlbeard"
+          ><img class="hublogo" src="img/github.svg" alt="Github Logo"
+        /></a>
+        <h3 style="color: white">Copyright © 2023 || owlbeard</h3>
+      </div>
     </div>
-    <div class="contBooks" onclick="closeForm()">
-    </div>
-    <div class="footer">
-      <a href="https://github.com/owlbeard"><img class="hublogo" src="img/github.svg" alt="Github Logo"></a>
-      <h3 style="color: white;">Copyright © 2023 || owlbeard</h3>
-    </div>
-  </div>
-</body>
+  </body>
 </html>
