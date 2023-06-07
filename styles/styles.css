@@ -17,7 +17,7 @@ body {
   justify-content: space-between;
   gap: 24px;
   position: relative;
-  background: linear-gradient(0.25turn, #015376, #2d2d2d, #7b0101); 
+  background: linear-gradient(0.25turn, #015376, #2d2d2d, #7b0101);
 }
 
 .header {
@@ -27,7 +27,7 @@ body {
   color: white;
 }
 
-.topBar  {
+.topBar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,11 +37,11 @@ body {
   display: flex;
 }
 
-
 .logo-image {
   height: 75px;
   width: auto;
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
+    brightness(102%) contrast(102%);
 }
 
 .signup {
@@ -50,18 +50,20 @@ body {
   font-weight: bolder;
   border: 0;
   border-radius: 12px;
-  background: #015376; 
+  background: #015376;
   color: white;
   padding: 4px;
   width: 100px;
   height: 40px;
 }
 
-.signup:hover, .deleteButton:hover {
+.signup:hover,
+.deleteButton:hover {
   transform: scale(1.1);
 }
 
-.signup:active, .deleteButton:active {
+.signup:active,
+.deleteButton:active {
   transform: translateY(4px);
 }
 
@@ -80,7 +82,6 @@ body {
   align-items: center;
   background-color: #2d2d2d;
   gap: 5px;
-  
 }
 
 .hublogo {
@@ -92,30 +93,67 @@ body {
 }
 
 .addBook {
-  margin: 0 auto;
   position: fixed;
-  z-index: 9;
   left: 50%;
 }
 
-.plus {
-  height: 75px;
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+@media (max-width: 640px) {
+  .addBook {
+    top: 3rem;
+  }
+  .open-button {
+    top: 3rem;
+  }
 }
 
-.plus:hover {
+@media (max-width: 420px) {
+  .addBook {
+    top: 5rem;
+  }
+  .open-button {
+    top: 5rem;
+  }
+  .signup {
+    font-size: 16px;
+  }
+  .logo-text {
+    font-size: 24px;
+  }
+  .form-container {
+    width: 175px;
+  }
+}
+
+@media (max-width: 420px) {
+  .contBooks {
+    margin-top: 3rem;
+  }
+}
+
+.plus {
+  position: relative;
+  height: 75px;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
+    brightness(102%) contrast(102%);
+}
+
+.open-button:hover {
   transform: scale(1.1);
 }
 
-.plus:active {
+.open-button:active {
   transform: translateY(4px);
 }
 
 .open-button {
   background: transparent;
-  position: relative;
+  position: fixed;
+  left: 50%;
   border: 0;
   padding: 0;
+  z-index: 8;
+  background-color: black;
+  border-radius: 12px;
 }
 
 .form-popup {
@@ -131,19 +169,21 @@ body {
 
 /* Add styles to the form container */
 .form-container {
-  width: 350px;
-  padding: 10px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.form-container input[type=text] {
-  width: 320px;
+.form-container input[type='text'] {
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
   border-radius: 12px;
-  background: linear-gradient(#7b0101, #015376); 
+  background: linear-gradient(#7b0101, #015376);
   color: white;
-  font-weight: bold ;
+  font-weight: bold;
 }
 
 .btn {
@@ -151,7 +191,7 @@ body {
   margin-top: 8px;
 }
 
-.form-container input[type=text]:focus {
+.form-container input[type='text']:focus {
   background-color: #ddd;
   outline: none;
 }
@@ -163,8 +203,8 @@ body {
   padding: 16px 20px;
   border: none;
   cursor: pointer;
-  width: 100%;
-  margin-bottom:10px;
+  width: 75%;
+  margin-bottom: 10px;
   opacity: 0.8;
 }
 
@@ -173,7 +213,8 @@ body {
   color: white;
 }
 
-.form-container .btn:hover, .open-button:hover {
+.form-container .btn:hover,
+.open-button:hover {
   opacity: 1;
 }
 
@@ -185,7 +226,7 @@ body {
   text-align: center;
   margin: 8px;
   white-space: pre;
-  background: linear-gradient(0.25turn, #7b0101, #2d2d2d, #015376); 
+  background: linear-gradient(0.25turn, #7b0101, #2d2d2d, #015376);
   color: white;
   border-radius: 12px;
   padding: 24px;
@@ -203,11 +244,12 @@ body {
   height: 50px;
   border: 0;
   padding: 0;
-  appearance: none;
-  position: relative;
-  left: 130px;
+  position: absolute;
+  right: 0;
+  bottom: 200px;
   top: 20px;
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
+    brightness(102%) contrast(102%);
 }
 
 .textBox {
@@ -215,7 +257,8 @@ body {
   display: block;
 }
 
-#textMark, #read {
+#textMark,
+#read {
   cursor: pointer;
   width: 25px;
   height: 25px;

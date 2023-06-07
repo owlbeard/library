@@ -1,6 +1,7 @@
 const books = document.querySelector('.contBooks');
 const button = document.querySelector('.open-button');
 const form = document.querySelector('form');
+const LOCAL_STORAGE_KEY = 'library';
 
 let bookNumber = 0;
 let lib = [];
@@ -10,16 +11,19 @@ button.addEventListener('click', openForm);
 /* Displaying the form whenever the user clicks the + sign on top of the screen. */
 function openForm() {
   document.getElementById('myForm').style.transform = 'scale(1)';
+  document.querySelector('.addBook').style.zIndex = '9';
   books.classList.add('backdrop-blur');
 }
 /* Hiding the form whenever the user clicks the close button on form or anywhere on container area */
 function closeForm() {
   document.getElementById('myForm').style.transform = 'scale(0)';
+  document.querySelector('.addBook').style.zIndex = '0';
   books.classList.remove('backdrop-blur');
 }
 
 /* Library constructor function */
-function Library(title, author, pages, read) {
+function Library(id, title, author, pages, read) {
+  this.id = id;
   this.title = title;
   this.author = author;
   this.pages = pages;
@@ -37,9 +41,9 @@ form.addEventListener('submit', (event) => {
   let author = document.getElementById('author').value;
   let pages = document.getElementById('pages').value;
   let checkbox = document.getElementById('read').checked;
-  let newBook = new Library(`${title}`, `${author}`, `${pages}`, `${checkbox}`);
+  let newBook = new Library(bookNumber, title, author, pages, checkbox);
   lib.push(newBook);
-
+  localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(lib));
   div.classList.add('book');
   div.setAttribute('data-index', `${bookNumber}`);
   books.appendChild(div);
